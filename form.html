@@ -12,205 +12,243 @@
         <div class="row justify-content-center">
             <div class="col-6">
 
-           
-        <div class="card">
-            <div class="card-header">
-                Form Registrasi
-            </div>
-            <div class="card-body">
 
-                <form method="post" >
-                    <div class="mb-3">
-                        <label for="foto" class="form-label">Foto</label>
-                        <input class="form-control" type="file" id="foto" name="foto" data-validation="required" onchange="validation(this)" accept="image/*" required>
-                        <div id="foto_feedback"></div>
-                      </div>
-                    <div class="mb-3">
-                        <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" data-validation="min3|required" onchange="validation(this)" placeholder="ex: Bambang Sujanarko" required>
-                        <div id="nama_lengkap_feedback"></div>
+                <div class="card">
+                    <div class="card-header">
+                        Form Registrasi
                     </div>
-                    <div class="mb-3">
-                        <label for="nama_panggilan" class="form-label">Nama Panggilan</label>
-                        <input type="text" class="form-control" id="nama_panggilan" name="nama_panggilan" data-validation="min3|required" onchange="validation(this)" placeholder="ex: Bambang" required>
-                        <div id="nama_panggilan_feedback"></div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="tempat_lahir" class="form-label">Tempat Lahir</label>
-                        <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" data-validation="required" onchange="validation(this)" placeholder="ex: Bandung" required>
-                        <div id="tempat_lahir_feedback"></div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
-                        <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" data-validation="required" onchange="validation(this); setUsia(this);" placeholder="ex: Bandung" required>
-                        <div id="tanggal_lahir_feedback"></div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="usia" class="form-label">Usia</label>
-                        <input class="form-control" type="text" id="usia" name="usia" data-validation="ageMin18|ageMax30" onchange="validation(this)" value="" placeholder="Masukkan Tanggal Lahir terlebih dahulu"
-                            aria-label="readonly input example" readonly>
-                        <div id="usia_feedback"></div>
+                    <div class="card-body">
 
-                    </div>
-                    <div class="mb-3">
-                        <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label><br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" data-validation="required" onchange="validation(this)"
-                                value="laki-laki">
-                            <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" data-validation="required" onchange="validation(this)"
-                                value="perempuan">
-                            <label class="form-check-label" for="inlineRadio2">Perempuan</label><br>
-                            <div id="jenis_kelamin_feedback"></div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="kota_tinggal" class="form-label">Kota Tinggal</label>
-                        <select class="form-select" id="kota_tinggal" name="kota_tinggal" aria-label="Kota Tinggal" data-validation="required" onchange="validation(this)">
-                            <option value="" selected disabled>Open this select menu</option>
-                            <option value="Bandung">Bandung</option>
-                            <option value="Jakarta">Jakarta</option>
-                            <option value="Semarang">Semarang</option>
-                        </select>
-                        <div id="kota_tinggal_feedback"></div>
-                    </div>
+                        <form method="post" action="" onsubmit="return validateSubmit()">
+                            <div class="mb-3">
+                                <label for="foto" class="form-label">Foto</label>
+                                <input class="form-control" type="file" id="foto" name="foto" data-validation="required"
+                                    onchange="validation(this)" accept="image/*">
+                                <div id="foto_feedback"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap"
+                                    data-validation="min3|required" onchange="validation(this)"
+                                    placeholder="ex: Bambang Sujanarko">
+                                <div id="nama_lengkap_feedback"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nama_panggilan" class="form-label">Nama Panggilan</label>
+                                <input type="text" class="form-control" id="nama_panggilan" name="nama_panggilan"
+                                    data-validation="min3|required" onchange="validation(this)"
+                                    placeholder="ex: Bambang">
+                                <div id="nama_panggilan_feedback"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tempat_lahir" class="form-label">Tempat Lahir</label>
+                                <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir"
+                                    data-validation="required" onchange="validation(this)" placeholder="ex: Bandung">
+                                <div id="tempat_lahir_feedback"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
+                                <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir"
+                                    data-validation="required" onchange="validation(this); setUsia(this);"
+                                    placeholder="ex: Bandung">
+                                <div id="tanggal_lahir_feedback"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="usia" class="form-label">Usia</label>
+                                <input class="form-control" type="text" id="usia" name="usia"
+                                    data-validation="required|ageMin18|ageMax30" onchange="validation(this)" value=""
+                                    placeholder="Masukkan Tanggal Lahir terlebih dahulu"
+                                    aria-label="readonly input example" readonly>
+                                <div id="usia_feedback"></div>
 
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" data-validation="required|email" onchange="validation(this)" placeholder="name@example.com">
-                        <div id="email_feedback"></div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="no_hp" class="form-label">No HP</label>
-                        <input type="number" class="form-control" id="no_hp" name="no_hp" data-validation="required|min4" onchange="validation(this)" placeholder="ex: 08xxxxxxxxx">
-                        <div id="no_hp_feedback"></div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="media_sosial" class="form-label">Media Sosial</label>
-                        <select class="form-select" aria-label="Media Sosial" id="media_sosial" name="media_sosial" data-validation="required" onchange="validation(this)"  multiple aria-label="multiple select example">
-                            <option value="" selected>Pilih Media Sosial</option>
-                            <option value="Facebook">Facebook</option>
-                            <option value="Instagram">Instagram</option>
-                            <option value="Twitter">Twitter</option>
-                        </select>
-                        <div id="media_sosial_feedback"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label><br>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1"
+                                        data-validation="requiredRadio" onchange="validation(this)" value="laki-laki">
+                                    <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2"
+                                        data-validation="requiredRadio" onchange="validation(this)" value="perempuan">
+                                    <label class="form-check-label" for="inlineRadio2">Perempuan</label><br>
+                                    <div id="jenis_kelamin_feedback"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="kota_tinggal" class="form-label">Kota Tinggal</label>
+                                <select class="form-select" id="kota_tinggal" name="kota_tinggal"
+                                    aria-label="Kota Tinggal" data-validation="required" onchange="validation(this)">
+                                    <option value="" selected disabled>Open this select menu</option>
+                                    <option value="Bandung">Bandung</option>
+                                    <option value="Jakarta">Jakarta</option>
+                                    <option value="Semarang">Semarang</option>
+                                </select>
+                                <div id="kota_tinggal_feedback"></div>
+                            </div>
 
-                    </div>
-                    <div class="d-grid gap-2">
-                        <button type="submit" onclick="return validateSubmit()" class="btn btn-primary btn-block">Submit</button>
-                    </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    data-validation="required|email" onchange="validation(this)"
+                                    placeholder="name@example.com">
+                                <div id="email_feedback"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="no_hp" class="form-label">No HP</label>
+                                <input type="number" class="form-control" id="no_hp" name="no_hp"
+                                    data-validation="required|min4" onchange="validation(this)"
+                                    placeholder="ex: 08xxxxxxxxx">
+                                <div id="no_hp_feedback"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="media_sosial" class="form-label">Media Sosial</label>
+                                <select class="form-select" aria-label="Media Sosial" id="media_sosial"
+                                    name="media_sosial" data-validation="required" onchange="validation(this)" multiple
+                                    aria-label="multiple select example">
+                                    <option value="" selected>Pilih Media Sosial</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Twitter">Twitter</option>
+                                </select>
+                                <div id="media_sosial_feedback"></div>
 
-                  
-                </form>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <script>
-        
-        function setError(el, errMsg){
+        function setError(el, errMsg) {
             el.classList.remove('is-invalid');
             el.classList.remove('is-valid');
             el.classList.add('is-invalid');
             // var errEl = document.createElement('div');
             // errEl.classList.add('invalid-feedback');
             // errEl.innerHTML = errMsg;
-            var feedback = document.getElementById(el.name+'_feedback');
+            var feedback = document.getElementById(el.name + '_feedback');
             feedback.classList.remove('invalid-feedback');
             feedback.classList.remove('valid-feedback');
             feedback.innerHTML = '';
             feedback.classList.add('invalid-feedback');
             feedback.innerHTML = errMsg;
         }
-        function setSuccess(el){
+
+        function setSuccess(el) {
             el.classList.remove('is-invalid');
             el.classList.remove('is-valid');
             el.classList.add('is-valid');
-            var feedback = document.getElementById(el.name+'_feedback');
+            var feedback = document.getElementById(el.name + '_feedback');
             feedback.classList.remove('invalid-feedback');
             feedback.classList.remove('valid-feedback');
             feedback.innerHTML = 'Mantap!';
             feedback.classList.add('valid-feedback');
         }
+
         function validateEmail(email) {
-            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            const re =
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return !re.test(String(email).toLowerCase());
         }
-        function validation(el){
+
+        function validation(el) {
             console.log(el.dataset.validation);
             var array_validation = el.dataset.validation.split('|');
             console.log(array_validation);
             var successCount = 0;
-            if(array_validation.includes('required')){
+            if (array_validation.includes('required')) {
                 console.log('required');
                 console.log(el.value);
-                if(el.value == ''){
+                if (el.value == '') {
                     setError(el, "Tidak Boleh Kosong");
-                    return null;
-                }else{
+                    return false;
+                } else {
                     successCount++;
                 }
             }
-            if(array_validation.includes('min3')){
+            if (array_validation.includes('requiredRadio')) {
+                console.log('requiredRadio');
+                var ele = document.getElementsByName(el.name);
+                var uncheck = 0;
+                console.log(ele);
+                for (j = 0; j < ele.length; j++) {
+                    if (ele[j].checked) {
+                        successCount++;
+                    } else {
+                        uncheck++;
+                    }
+                }
+                if (uncheck == ele.length) {
+                    setError(el, "Tidak Boleh Kosong");
+                    return false;
+                }
+            }
+            if (array_validation.includes('min3')) {
                 console.log('min3');
-                if(el.value.length < 3){
+                if (el.value.length < 3) {
                     setError(el, "Minimal 3 Karakter");
-                    return null;
-                }else{
+                    return false;
+                } else {
                     successCount++;
                 }
             }
-            if(array_validation.includes('min4')){
+            if (array_validation.includes('min4')) {
                 console.log('min4');
-                if(el.value.length < 4){
+                if (el.value.length < 4) {
                     setError(el, "Minimal 4 Karakter");
-                    return null;
-                }else{
+                    return false;
+                } else {
                     successCount++;
                 }
             }
-            if(array_validation.includes('ageMin18')){
+
+            if (array_validation.includes('ageMin18')) {
                 console.log('ageMin18');
-                if(parseInt(el.value) < 18){
+                if (parseInt(el.value) < 18) {
                     setError(el, "Usia Minimal 18 Tahun");
-                    return null;
-                }else{
+                    return false;
+                } else {
                     successCount++;
                 }
             }
-            if(array_validation.includes('ageMax30')){
+            if (array_validation.includes('ageMax30')) {
                 console.log('ageMax30');
-                if(parseInt(el.value) > 30){
+                if (parseInt(el.value) > 30) {
                     setError(el, "Usia Maksimal 30 Tahun");
-                    return null;
-                }else{
+                    return false;
+                } else {
                     successCount++;
                 }
             }
-            if(array_validation.includes('email')){
-                if(validateEmail(el.value)){
+            if (array_validation.includes('email')) {
+                if (validateEmail(el.value)) {
                     console.log('email');
                     setError(el, "Harus Format Email");
-                    return null;
-                }else{
+                    return false;
+                } else {
                     successCount++;
                 }
             }
-            
 
-            if(successCount == array_validation.length){
+
+            if (successCount == array_validation.length) {
                 setSuccess(el);
-                return null;
+                return true;
             }
         }
 
-        function setUsia(el){
+        function setUsia(el) {
             var born = new Date(el.value.toString());
             var now = new Date();
             var age = now.getFullYear() - born.getFullYear();
@@ -220,15 +258,20 @@
             validation(usiaEl);
 
         }
-        function validateSubmit(){
-            var el = document.querySelectorAll(".form-control,.form-select,.form-check-input");
-            for (i = 0; i < el.length; i++) {
-                validation(el[i]);
-            }
-            return false;
-        }
 
-        
+        function validateSubmit() {
+            var el = document.querySelectorAll(".form-control,.form-select,.form-check-input");
+            var countError = 0;
+            for (i = 0; i < el.length; i++) {
+                if (!validation(el[i])) {
+                    countError++;
+                }
+            }
+            if (countError > 0) {
+                return false;
+            }
+            return true;
+        }
     </script>
     </body>
 
