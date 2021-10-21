@@ -16,7 +16,7 @@ $tgl = date('Y-m-d');
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">
-					<img src="images/logo-perpustakaan3.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+					<img src="images/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
 					PERPUSTAKAAN UMUM
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,19 +45,19 @@ $tgl = date('Y-m-d');
 			<div class="col-md-2 mt-5">
 				<ul class="nav nav-pills flex-column">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="index.php?p=beranda">Beranda</a>
+						<a class="nav-link <?php echo (strpos($_GET['p'],'beranda')!== false) ? 'active' : ''; ?>" aria-current="page" href="index.php?p=beranda">Beranda</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link disabled">Entry Data Dan Transaksi</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="index.php?p=anggota">Data Anggota</a>
+						<a class="nav-link <?php echo (strpos($_GET['p'],'anggota')!== false) ? 'active' : ''; ?>" href="index.php?p=anggota">Data Anggota</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="index.php?p=buku">Data Buku</a>
+						<a class="nav-link <?php echo (strpos($_GET['p'],'buku')!== false) ? 'active' : ''; ?>" href="index.php?p=buku">Data Buku</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="index.php?p=transaksi-peminjaman">Transaksi Peminjaman</a>
+						<a class="nav-link <?php echo (strpos($_GET['p'],'transaksi')!== false) ? 'active' : ''; ?>" href="index.php?p=transaksi-peminjaman">Transaksi Peminjaman</a>
 					</li>
 					
 				</ul>
