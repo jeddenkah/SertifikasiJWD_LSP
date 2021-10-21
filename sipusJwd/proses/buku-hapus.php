@@ -2,7 +2,7 @@
 include'../koneksi.php';
 $id_buku=$_GET['id'];
 
-mysqli_query(
+mysqli_query($db,
 	"DELETE FROM tbbuku
 	WHERE idbuku='$id_buku'"
 );
