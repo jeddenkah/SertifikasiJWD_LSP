@@ -8,7 +8,7 @@ $penerbit=$_POST['penerbit'];
 $status="Tersedia";
 	
 if(isset($_POST['simpan'])){
-	mysql_query(
+	mysqli_query(
 		"INSERT INTO tbbuku
 		VALUES('$id_buku','$judul_buku','$kategori','$pengarang','$penerbit','$status')"
 	);

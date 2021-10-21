@@ -2,7 +2,7 @@
 include '../koneksi.php';
 
 $id_anggota=$_POST['id_anggota'];
-$nama=$_POST['name'];
+$nama=$_POST['nama'];
 $jenis_kelamin=$_POST['jenis_kelamin'];
 $alamat=$_POST['alamat'];
 
