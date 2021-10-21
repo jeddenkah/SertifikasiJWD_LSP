@@ -3,13 +3,13 @@
 </div>
 <div id="content" class="col-8">
 	<form action="proses/buku-input-proses.php" method="post">
-		<div class="mb-3 row">
+		<!-- <div class="mb-3 row">
 			<label for="" class="col-sm-2 col-form-label">ID Buku</label>
 			<div class="col-sm-10">
 				<input type="text" name="id_buku" class="form-control">
 
 			</div>
-		</div>
+		</div> -->
 		<div class="mb-3 row">
 			<label for="" class="col-sm-2 col-form-label">Judul Buku</label>
 			<div class="col-sm-10">
